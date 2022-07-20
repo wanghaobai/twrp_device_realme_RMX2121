@@ -12,7 +12,7 @@
 	echo -e "\x1b[96mbomb: 开始添加OrangeFox Vars...\x1b[m"
 	## 构建信息
 	# 设置显示在关于页面里的维护人员名称
-	export OF_MAINTAINER=ymdzq
+	export OF_MAINTAINER=test
 	# 设置版本号为日期
 	export FOX_VERSION=$(date +%y.%m.%d)
 
@@ -47,26 +47,6 @@
 	export OF_FL_PATH2=/sys/class/leds/torch-light1
 	# 橙狐只支持两个闪光灯路径变量，但是这个手机有3个,其实有一个就行了，这个无实际用途
 	# export OF_FL_PATH3=/sys/class/leds/torch-light2
-
-	## 界面显示设定
-	# 设置屏幕高度，状态栏高度，状态栏左右边距
-	# 由于橙狐默认屏幕比例是16：9,所以应设置屏幕高度为屏幕比例换算成n：9之后，n*120
-	export OF_SCREEN_H=2400
-	export OF_STATUS_H=59
-	export OF_STATUS_INDENT_LEFT=90
-	export OF_STATUS_INDENT_RIGHT=90
-	# 添加黑色状态栏（隐藏刘海）选项
-	export OF_HIDE_NOTCH=1
-	# 由于有刘海遮挡，设置时钟位置为只能显示在左侧或右侧
-	export OF_CLOCK_POS=1
-	# 禁止禁用导航栏
-	export OF_ALLOW_DISABLE_NAVBAR=0
-
-	## 使刷机包兼容红米10X 5G和红米10X Pro
-	# 使红米10X 5G和红米10X Pro都能刷入橙狐zip卡刷包
-	export TARGET_DEVICE_ALT="atom, bomb"
-	# 使橙狐可以刷入具有机型检测限制为红米10X 5G或者红米10X Pro的zip卡刷包，与TARGET_OTA_ASSERT_DEVICE冲突
-	# export OF_TARGET_DEVICES="atom,bomb"
 
 	## 添加橙狐特殊处理
 	# 设定recovery、system、vendor、boot分区路径
